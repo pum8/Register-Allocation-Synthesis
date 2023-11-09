@@ -25,3 +25,12 @@ class interpreter:
             if(point not in self.graph.graphLV[src]):
                 self.graph.graphLV[src].append(point)
                 self.graph.graphLV[src].sort()
+    """
+    #working
+    def coalesceLVtemp(self,src1,dst1,src2,dst2):
+        if(dst1==src2 and (dst2 in self.graph.linkerSSA[src1]) and (len(self.graph.graphLV[src1]>1) and dst2 in self.graph.linkerSSA[dst1] )):
+            self.graph.graphLV[src1].remove(dst1)
+            if(dst2 not in self.graph.graphLV[src1]):
+                self.graph.graphLV[src1].append(dst1)
+            self.graph.graphLV[src1].sort()  
+    """
